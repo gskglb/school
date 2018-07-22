@@ -1,8 +1,6 @@
 <template>
   <div class="login-container">
-
     <el-form class="login-form" autoComplete="on" :model="loginForm" :rules="loginRules" ref="loginForm" label-position="left">
-
       <div class="title-container">
         <h3 class="title">{{$t('login.title')}}</h3>
         <lang-select class="set-language"></lang-select>
@@ -28,6 +26,7 @@
       </el-form-item>
 
       <el-button type="primary" style="width:100%;margin-bottom:30px;" :loading="loading" @click.native.prevent="handleLogin">{{$t('login.logIn')}}</el-button>
+      <el-button type="primary" style="width:100%;margin-bottom:28px;" @click="showDialog=true">{{$t('login.thirdparty')}}</el-button>
 
       <div class="tips">
         <span>{{$t('login.username')}} : admin</span>
@@ -37,8 +36,7 @@
         <span style="margin-right:18px;">{{$t('login.username')}} : editor</span>
         <span>{{$t('login.password')}} : {{$t('login.any')}}</span>
       </div>
-
-      <el-button class="thirdparty-button" type="primary" @click="showDialog=true">{{$t('login.thirdparty')}}</el-button>
+   
     </el-form>
 
     <el-dialog :title="$t('login.thirdparty')" :visible.sync="showDialog" append-to-body>
@@ -77,8 +75,8 @@ export default {
     }
     return {
       loginForm: {
-        username: 'admin',
-        password: '1111111'
+        username: '',
+        password: ''
       },
       loginRules: {
         username: [{ required: true, trigger: 'blur', validator: validateUsername }],

@@ -71,11 +71,11 @@ export default {
   },
   login: {
     title: 'ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಮಾಡಿ',
-    logIn: 'ಲಾಗ್ ಇನ್',
-    username: 'Username',
-    password: 'Password',
+    logIn: 'ಸೈನ್ ಇನ್ ಮಾಡಿ',
+    username: 'ಬಳಕೆದಾರರ ಗುರುತು',
+    password: 'ಪಾಸ್ವರ್ಡ್',
     any: 'any',
-    thirdparty: 'Or connect with',
+    thirdparty: 'ಅಥವಾ ನಿಮ್ಮ ಸಾಮಾಜಿಕ ಐಡಿ ಬಳಸಿ',
     thirdpartyTips: 'Can not be simulated on local, so please combine you own business simulation! ! !'
   },
   documentation: {
