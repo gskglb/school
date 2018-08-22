@@ -2,9 +2,7 @@ var express = require('express')
 var serveStatic = require('serve-static')
 
 var app = express()
-var path = require('path')
-
-app.use(serveStatic(path.join(__dirname, '/dist')))
+app.use(serveStatic(__dirname))
 
 var server = app.listen(process.env.PORT || 5000, function() {
   var port = server.address().port

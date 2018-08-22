@@ -1,0 +1,10 @@
+{
+    "name": "school",
+    "version": "1.0.0",
+    "description": "School Management Front End App ",
+    "author": "guru",
+    "private": true,
+    "scripts": {
+      "postinstall": "npm install express"
+    }
+   }
