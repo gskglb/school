@@ -15,3 +15,8 @@ What is changed
 1. Added new package.json to dist folder to install express
 2. Added server.js file in the dist folder
 3. Modified start script in the root package.json to for start
+
+For pushing source code to github use
+git push origin master
+
+
