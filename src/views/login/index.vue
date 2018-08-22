@@ -26,7 +26,8 @@
       </el-form-item>
 
       <el-button type="primary" style="width:100%;margin-bottom:30px;" :loading="loading" @click.native.prevent="handleLogin">{{$t('login.logIn')}}</el-button>
-      <el-button type="primary" style="width:100%;margin-bottom:28px;" @click="showDialog=true">{{$t('login.thirdparty')}}</el-button>
+      <br />
+      <el-button type="primary" style="width:100%;margin-bottom:20px;margin-left=-5px" @click="showDialog=true">{{$t('login.thirdparty')}}</el-button>
 
       <div class="tips">
         <span>{{$t('login.username')}} : admin</span>

@@ -12,7 +12,6 @@ import router from './router'
 import store from './store'
 
 import i18n from './lang'
-import './icons'
 import './errorLog'
 import './permission'
 import './mock'

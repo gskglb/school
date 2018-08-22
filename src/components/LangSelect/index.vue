@@ -1,7 +1,8 @@
 <template>
   <el-dropdown trigger="click" class='international' @command="handleSetLanguage">
     <div>
-      <svg-icon class-name='international-icon' icon-class="language" />
+      <!-- <svg-icon class-name='international-icon' icon-class="language" /> -->
+      Lang V
     </div>
     <el-dropdown-menu slot="dropdown">
       <el-dropdown-item command="kn" :disabled="language==='kn'">ಕನ್ನಡ</el-dropdown-item>
