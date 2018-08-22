@@ -70,7 +70,7 @@ export default {
     theme: 'theme'
   },
   login: {
-    title: 'Login Please',
+    title: 'Login Form',
     logIn: 'Log in',
     username: 'Username',
     password: 'Password',

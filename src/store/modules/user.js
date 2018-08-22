@@ -44,6 +44,7 @@ const user = {
   },
 
   actions: {
+    // 用户名登录
     LoginByUsername({ commit }, userInfo) {
       const username = userInfo.username.trim()
       return new Promise((resolve, reject) => {
@@ -58,15 +59,16 @@ const user = {
       })
     },
 
+    // 获取用户信息
     GetUserInfo({ commit, state }) {
       return new Promise((resolve, reject) => {
         getUserInfo(state.token).then(response => {
-          if (!response.data) {
+          if (!response.data) { // 由于mockjs 不支持自定义状态码只能这样hack
             reject('error')
           }
           const data = response.data
 
-          if (data.roles && data.roles.length > 0) {
+          if (data.roles && data.roles.length > 0) { // 验证返回的roles是否是一个非空数组
             commit('SET_ROLES', data.roles)
           } else {
             reject('getInfo: roles must be a non-null array !')
@@ -82,6 +84,7 @@ const user = {
       })
     },
 
+    // 第三方验证登录
     // LoginByThirdparty({ commit, state }, code) {
     //   return new Promise((resolve, reject) => {
     //     commit('SET_CODE', code)
@@ -95,6 +98,7 @@ const user = {
     //   })
     // },
 
+    // 登出
     LogOut({ commit, state }) {
       return new Promise((resolve, reject) => {
         logout(state.token).then(() => {
@@ -108,6 +112,7 @@ const user = {
       })
     },
 
+    // 前端 登出
     FedLogOut({ commit }) {
       return new Promise(resolve => {
         commit('SET_TOKEN', '')
@@ -116,6 +121,7 @@ const user = {
       })
     },
 
+    // 动态修改权限
     ChangeRoles({ commit }, role) {
       return new Promise(resolve => {
         commit('SET_TOKEN', role)

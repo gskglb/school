@@ -1,8 +1,7 @@
 <template>
   <el-dropdown trigger="click" class='international' @command="handleSetLanguage">
     <div>
-      <!-- <svg-icon class-name='international-icon' icon-class="language" /> -->
-      Lang V
+      <svg-icon class-name='international-icon' icon-class="language" />
     </div>
     <el-dropdown-menu slot="dropdown">
       <el-dropdown-item command="kn" :disabled="language==='kn'">ಕನ್ನಡ</el-dropdown-item>
@@ -23,7 +22,7 @@ export default {
       this.$i18n.locale = lang
       this.$store.dispatch('setLanguage', lang)
       this.$message({
-        message: 'Switching language is successful',
+        message: 'switch language success',
         type: 'success'
       })
     }
